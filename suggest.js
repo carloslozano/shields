@@ -52,7 +52,7 @@ var twitterPage = function(url) {
   return Promise.resolve({
     name: 'Twitter',
     link: 'https://twitter.com/intent/tweet?text=Wow:&url=' + encodeURIComponent(url),
-    badge: 'https://img.shields.io/twitter/url/' + schema + '/' + host + path + '.svg?style=social',
+    badge: 'http://i.4dp.me/twitter/url/' + schema + '/' + host + path + '.svg?style=social',
   });
 };
 var githubIssues = function(user, repo) {
@@ -60,7 +60,7 @@ var githubIssues = function(user, repo) {
   return Promise.resolve({
     name: 'GitHub issues',
     link: 'https://github.com/' + userRepo + '/issues',
-    badge: 'https://img.shields.io/github/issues/' + userRepo + '.svg',
+    badge: 'http://i.4dp.me/github/issues/' + userRepo + '.svg',
   });
 };
 var githubForks = function(user, repo) {
@@ -68,7 +68,7 @@ var githubForks = function(user, repo) {
   return Promise.resolve({
     name: 'GitHub forks',
     link: 'https://github.com/' + userRepo + '/network',
-    badge: 'https://img.shields.io/github/forks/' + userRepo + '.svg',
+    badge: 'http://i.4dp.me/github/forks/' + userRepo + '.svg',
   });
 };
 var githubStars = function(user, repo) {
@@ -76,7 +76,7 @@ var githubStars = function(user, repo) {
   return Promise.resolve({
     name: 'GitHub stars',
     link: 'https://github.com/' + userRepo + '/stargazers',
-    badge: 'https://img.shields.io/github/stars/' + userRepo + '.svg',
+    badge: 'http://i.4dp.me/github/stars/' + userRepo + '.svg',
   });
 };
 
@@ -235,7 +235,7 @@ var guessLicense = function(text) {
 
 
 var shieldsBadge = function(badgeData) {
-  return ('https://img.shields.io/badge/'
+  return ('http://i.4dp.me/badge/'
     + escapeField(badgeData.text[0])
     + '-' + escapeField(badgeData.text[1])
     + '-' + badgeData.colorscheme + '.svg');
